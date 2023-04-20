@@ -15,8 +15,8 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
         <>
         <div className="input-group input-spinner mb3 d-flex">
             <input className="border-dark" placeholder="" value={count} type="number"/>
-            <button className="btn btn-icon btn-dark" type="button" onClick={increase} disabled={count >= stock}>+</button>
             <button className="btn btn-icon btn-dark" type="button" onClick={decrease} disabled={count <= 0}>-</button>
+            <button className="btn btn-icon btn-dark" type="button" onClick={increase} disabled={count >= stock}>+</button>
          </div>
          <div className="d-flex">
             <button type="button" className="btn btn-dark" disabled={stock <= 0} onClick={() => onAdd(count)}>Comprar!</button>
